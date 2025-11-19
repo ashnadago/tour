@@ -1,0 +1,759 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@500&family=Arimo:wght@500&family=Inter:wght@500&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arimo', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  padding: 0 3.5rem;
+  position: relative;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 80%, 100% 100%, 23% 89%, 0 85%, 0 0);
+  overflow: hidden;
+}
+
+
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8));
+  z-index: -1;
+}
+
+.news-container{
+    height: 50vh;
+    width: 100%;
+    padding: 0 3.5rem;
+   position: relative;
+   overflow: hidden;
+}
+
+.news-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8));
+  z-index: -1;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-menu a, .dropdown {
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+
+.logo {
+    font-size: clamp(16px, 4vw, 24px);
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-right: auto;
+   
+    cursor: pointer;
+}
+
+
+.logo span {
+  font-size: 2.5rem;
+}
+
+
+.contact-button {
+    font-size: 1.1rem;
+    margin-left: auto;
+}
+
+.heading {
+    margin-top: 7rem;
+    line-height: 0.9;
+}
+
+.quote-1 {
+    margin-top: 5rem;
+}
+
+.quote-1-news {
+    margin-top: -1.5rem;
+}
+
+.section1 {
+    height: auto;
+    width: 100%;
+    background-color: rgb(24, 24, 24);
+}
+
+.section1-image {
+    position: relative;
+    height: 340px;
+    width: 100%;
+}
+
+.section1-image img {
+    height: 100%;
+    width: 100%;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section1-image:hover .overlay {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+input[type="text"] {
+    width: 70%;
+    height: 40px;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+}
+
+.button-container {
+    position: relative;
+}
+
+.subcribe-button {
+    position: absolute;
+    top: 0;
+    right: 3rem;
+}
+
+/* Recipe Section */
+.container1 {
+    padding: 0 3.5rem;
+    overflow: hidden;
+    position: relative;
+ 
+}
+
+
+
+.container1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8));
+  z-index: -1;
+}
+
+
+
+.recipe-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
+    margin-top: 5rem;
+}
+
+.recipe-container input {
+    width: 75%;
+    height: 55px;
+    margin: 0 auto;
+    color: #fff;
+    ::placeholder {
+        color: #fff;
+    }
+}
+
+.recipe-container > .bi-search {
+    position: absolute;
+    right: 11rem;
+    top: 0;
+    height: 100%;
+    font-size: 1.5rem;
+    margin-top: 7px;
+    cursor: pointer;
+}
+
+.section2 {
+    width: 100%;
+    height: auto;
+}
+
+.image-recipe {
+    width: 300px;
+    height: 250px;
+    margin-bottom: 5rem;
+}
+
+.image-recipe img {
+    width: 100%;
+    height: 100%;
+}
+
+.trending-container > p:hover {
+    margin-top: 0.5rem;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: #00e078;
+    cursor: pointer;
+}
+
+.recipe-container1 {
+    position: relative;
+}
+
+.recipe-container1 input {
+    width: 500px;
+    height: 40px;
+   
+}
+
+.recipe-container1 > .bi-search {
+    position: absolute;
+    left: 31rem;
+    top: 0.3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.dish-recipe-container {
+    height: auto;
+}
+
+.kitchen-container {
+    display: block;
+    height: auto;
+    padding: 3rem 3rem 0 3rem;
+}
+
+.kitchen-container-content {
+    display: flex;
+    justify-content: center;
+    margin-block: 3rem;
+}
+
+.kitchen-container-content > img {
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.kitchen-container-content-text {
+    flex: 1;
+    margin-left: 2rem;
+}
+
+.kitchen-container-content-text > a {
+    font-weight: bold;
+    font-size: clamp(1rem, 1.7vw, 2rem);
+    text-decoration: none;
+}
+
+.kitchen-container-content-text > h6 {
+    margin-top: 0;
+    font-weight: 600;
+}
+
+.kitchen-container a:is(:hover, :focus) {
+    text-decoration: #00e078 underline;
+    text-underline-offset: 7px;
+}
+
+.image-infographic {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.image-infographic > img {
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+
+
+/* Indulge Section and Locate Store Section for Home */
+@media only screen and (max-width: 1100px) {
+    .indulge-container > div,
+    .explore-container > div {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0;
+        margin: 0;
+    }
+
+    .indulge-container > div > img,
+    .explore-container > div > img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .indulge > h1,
+    .explore > h1 {
+        font-size: clamp(1.7rem, 2vw, 5vw);
+    }
+
+    .indulge > p,
+    .explore > p {
+        font-size: clamp(1.2rem, 1vw, 4vw);
+        margin-inline: auto;
+    }
+
+    .explore > button {
+        margin-right: auto;
+    }
+
+    .locate-h1 {
+        font-size: clamp(1.7rem, 2vw, 5vw);
+    }
+}
+
+/* Footer for All Pages */
+@media only screen and (max-width: 720px) {
+    .footer-container > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-soc-meds {
+        margin-bottom: 3rem;
+    }
+
+    .subcribe-button {
+        right: 10rem; /* Adjust this value based on your design */
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .subcribe-button {
+        right: 8rem; /* Adjust this value based on your design */
+    }
+}
+
+
+/* recipe page */
+@media only screen and (max-width:1100px) {
+  .recipe-container > .bi-search{
+      right: 10rem;
+  }
+}
+@media only screen and (max-width:1000px) {
+
+  .recipe-container > .bi-search{
+      right: 9rem;
+  }
+}
+@media only screen and (max-width:900px) {
+  .recipe-container > .bi-search{
+      right: 9rem;
+  }
+}
+@media only screen and (max-width:800px) {
+  .recipe-container > .bi-search{
+      right: 8rem;
+  }
+}
+@media only screen and (max-width:700px) {
+  .recipe-container > .bi-search{
+      right: 7rem;
+  }
+}
+@media only screen and (max-width:600px) {
+  .recipe-container > .bi-search{
+      right: 6rem;
+  }
+}
+@media only screen and (max-width:500px) {
+  .recipe-container > .bi-search{
+      right: 5rem;
+  }
+}
+@media only screen and (max-width:400px) {
+  .recipe-container > .bi-search{
+      right: 4rem;
+  }
+}
+@media only screen and (max-width:1130px) {
+  .indulge-recipe-container{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      padding: 0;
+      margin: 0;
+  }
+}
+@media only screen and (max-width:730px) {
+  .indulge-recipe-desc{
+      width: 80%;
+  }
+}
+@media only screen and (max-width:730px) {
+  .dish-recipe-container{
+      width: 80%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .recipe-container1 > .bi-search {
+      left: 30rem;
+  }
+}
+@media only screen and (max-width: 1070px) {
+  .recipe-container1 > .bi-search {
+      left: 29rem;
+  }
+}
+@media only screen and (max-width: 1040px) {
+  .recipe-container1 > .bi-search {
+      left: 28rem;
+  }
+}
+@media only screen and (max-width: 1010px) {
+  .recipe-container1 > .bi-search {
+      left: 27rem;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .recipe-container1 > .bi-search {
+      left: 26rem;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .recipe-container1 > .bi-search {
+      left: 25rem;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .recipe-container1 > .bi-search {
+      left: 24rem;
+  }
+}
+@media only screen and (max-width: 890px) {
+  .recipe-container1 > .bi-search {
+      left: 23rem;
+  }
+}
+@media only screen and (max-width: 860px) {
+  .recipe-container1 > .bi-search {
+      left: 22rem;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .recipe-container1 > .bi-search {
+      left: 21rem;
+  }
+}
+@media only screen and (max-width: 810px) {
+  .recipe-container1 > .bi-search {
+      left: 20rem;
+  }
+}
+@media only screen and (max-width: 780px) {
+  .recipe-container1 > .bi-search {
+      left: 19rem;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .recipe-container1 > .bi-search {
+      left: 18rem;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .recipe-container1 > .bi-search {
+      left: 17rem;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .recipe-container1 > .bi-search {
+      left: 16rem;
+  }
+}
+@media only screen and (max-width: 660px) {
+  .recipe-container1 > .bi-search {
+      left: 15rem;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .recipe-container1 > .bi-search {
+      left: 14rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .recipe-container1 > input {
+      width: 47%;
+  }
+  .recipe-container1 > .bi-search {
+      left: 13rem;
+  }
+}
+@media only screen and (max-width: 570px) {
+  .recipe-container1 > .bi-search {
+      left: 12rem;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .recipe-container1 > .bi-search {
+      left: 11rem;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .recipe-container1 > .bi-search {
+      left: 10rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .dish-buttons {
+      margin-top: 13rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .recipe-container1 > input {
+      width: 100%;
+  }
+  .recipe-container1 > .bi-search {
+      left: 22rem;
+  }
+  .dish-search {
+      margin-top: -9rem;
+  }
+}
+@media only screen and (max-width: 610px) {
+  .dish-buttons {
+      margin-top: 17rem;
+  }
+  .dish-search {
+      margin-top: -7rem;
+  }
+}
+@media only screen and (max-width: 1100px) {
+ .recipe-steak-heading{
+  font-size: clamp(1.7rem, 2vw, 5vw);
+ }
+ .recipe-steak-paragraph{
+  font-size: clamp(1.2rem, 1vw, 4vw);
+ }
+}
+@media only screen and (max-width: 600px) {
+  .kitchen-container-content{
+      display: flex;
+      flex-direction: column;
+  }
+  .kitchen-heading{
+      padding-top: 2rem;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .recipe-steak-heading1{
+      font-size: clamp(1.7rem, 2vw, 5vw);
+  }
+}
+@media only screen and (max-width: 900px) {
+  .recipe-container-steak-surprise{
+      display: flex;
+      flex-direction: column;
+  }
+}
+
+ /* Services page */
+@media only screen and (max-width: 1100px) {
+    .services-cuts-heading,
+    .services-grill-heading,
+    .services-sauce-heading,
+    .services-custom-heading,
+    .news-heading {
+      font-size: clamp(1.7rem, 2vw, 5vw);
+    }
+    .services-cuts-paragraph,
+    .services-grill-paragraph,
+    .services-sauce-paragraph,
+    .services-custom-paragraph,
+    .news-paragraph,
+    .news-link {
+      font-size: clamp(1.2rem, 1vw, 4vw);
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .services-cuts-container-heading,
+    .services-grill-container-heading,
+    .services-sauce-container-heading,
+    .services-custom-container-heading {
+      margin-top: -3rem;
+    }
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .news-container {
+      height: auto;
+    }
+    .news-link {
+      white-space: wrap;
+      width: 50%;
+    }
+  }
+  
+  @media only screen and (max-width: 740px) {
+    .news-link-container {
+      flex-direction: column;
+    }
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .services-grill-container-heading,
+    .services-custom-container-heading {
+      margin-top: -6rem;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .services-cuts-heading1 {
+      font-size: clamp(1.2rem, 2vw, 4vw);
+      padding-bottom: 1rem;
+    }
+    .image-recipe > img {
+      padding-top: 4rem;
+    }
+  }
+  
+
+
+.grand {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grand .gallery-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.grand #gallery {
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.grand #gallery img {
+    margin: 10px;
+    width: calc(100% - 20px);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.grand #gallery img:hover {
+    transform: scale(1.05);
+}
+
+.grand .pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.grand .pagination button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.grand .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+/* Modal styles */
+.grand .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.grand .modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.grand #caption {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.grand .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.grand .close:hover, .grand .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Ashna dagotour</title>
+      <link rel="shortcut icon" href="images/SH-favicon.png" type="image/x-icon">
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+      <style>/* --- GALLERY SOCIAL GRID --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.gallery-info {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.gallery-description {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.gallery-date {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+</style>
+   </head>
+   <body>
+      <div class="news-container">
+         <video autoplay muted loop id="background-video">
+            <source src="pano.mp4" type="video/mp4">
+            
+        </video>
+
+
+         <div class="w3-bar w3-padding-32 w3-animate-zoom nav-menu">
+            <p class="w3-text-white w3-hover-opacity w3-left logo">ASHNA <span>DAGO</span>TOUR</p>
+            <a href="index.html" class="w3-hide-small w3-hide-medium w3-bar-item w3-text-white w3-large w3-mobile">Accueil</a>
+            <a href="recipe.html" class="w3-hide-small w3-hide-medium w3-bar-item w3-text-white w3-large w3-mobile">Offres</a>
+           
+            <a href="news.html" class="w3-hide-small w3-bar-item w3-text-green w3-mobile w3-large w3-hide-medium ">Galerie</a>      
+           
+            <a href="contact.html"><button class="w3-btn w3-green w3-center" style="display: block;margin-inline: auto;">Contact</button></a>
+             <a href="javascript:void(0)" class="w3-bar-item w3-btn w3-right w3-hide-large w3-xlarge w3-text-white" onclick="myFunction()" style="margin: 0;">&#9776;</a>
+         </div>
+
+         <div id="demo" class="w3-bar-block w3-gray w3-center w3-hide w3-hide-large w3-hide-medium w3-padding-16">
+            <a href="index.html" class="w3-bar-item w3-text-green w3-large w3-center" style="text-decoration: none;">Accueil</a>
+            <a href="recipe.html" class="w3-bar-item w3-text-white w3-large w3-mobile w3-center"style="text-decoration: none;">Offres</a>
+           
+             <a href="news.html" class="w3-bar-item w3-text-white w3-mobile w3-large w3-center"style="text-decoration: none;">Galerie</a>
+             <a href="contact.html"><button class="w3-btn w3-green w3-center" style="display: block;margin-inline: auto;">Contact</button></a>
+          </div>
+         <div class="w3-center quote-1-news">
+            <div class="w3-panel w3-animate-top">
+                <div class="w3-container w3-center w3-white w3-padding news-container-heading">
+                   <h1 class="news-heading" style="font-weight: bold;">
+                     Venez découvrir Madagascar❤️
+                  </h1>
+                   <p class="w3-large w3-margin-bottom news-paragraph" style="margin-top: 0;">
+                     Plongez dans le coeur de cette merveilleuse île pour découvrir : ses diverses traditions ethniques, ses plantes endemiques, ses étonnants animaux, et bien plus encore !
+                  </p>
+                </div>
+             </div>
+         </div>
+         <div class="w3-container w3-center w3-padding-32 w3-animate-top">
+            <a href="https://www.whatsapp.com"><i class="bi bi-whatsapp w3-xlarge w3-round-xxlarge w3-green w3-padding-small w3-margin-right" style="cursor: pointer;"></i></a>
+            <a href="https://www.facebook.com/jean.florent.351"><i class="bi bi-facebook w3-xlarge w3-xlarge w3-round-xxlarge w3-blue w3-padding-small w3-margin-right" style="cursor: pointer;"></i></a>
+            <a href="https://www.instagram.com"><i class="bi bi-instagram w3-xlarge w3-xlarge w3-round-xxlarge w3-red w3-padding-small w3-margin-right" style="cursor: pointer;"></i></a>
+            <a href="https://mail.google.com/"><i class="bi bi-envelope w3-xlarge w3-xlarge w3-round-xxlarge w3-red w3-text-white w3-padding-small w3-margin-right" style="cursor: pointer;"></i></a>
+         </div>
+      </div>
+     
+      <div class="w3-row-padding" style="height: auto; margin-block: 5rem 14rem;">
+         
+        <div class="grand">
+         <div class="gallery-container">
+            <div id="gallery"  class="gallery-grid">
+                <!-- Les images seront ajoutées ici par JavaScript -->
+            </div>
+            <div class="pagination">
+                <button id="prev-btn">Précédent</button>
+                <button id="next-btn">Suivant</button>
+            </div>
+        </div>
+    
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+           
+        </div>
+    
+       
+        </div>
+      </div>
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+      <div class="w3-animate-opacity w3-topbar w3-border-green footer-container" style=" background-color:rgb(24, 24, 24); margin-top: 5rem;padding-top: 2rem;">
+         <div class="w3-cell-row w3-margin">
+            <div class="w3-text-green w3-cell w3-cell-top footer-soc-meds" style="font-size: 1.4rem;">
+               <p class="w3-text-white w3-hover-opacity w3-margin-bottom logo">ASHNA DAGOTOUR</p>
+               <i class="bi bi-facebook w3-margin-right" style="cursor: pointer;"><a href="https://www.facebook.com/jean.florent.351"></a></i>
+               <i class="bi bi-instagram w3-margin-right" style="cursor: pointer;"></i>
+               <i class="bi bi-twitter-x w3-margin-right" style="cursor: pointer;"></i>
+             
+            </div>
+            <div class="w3-cell w3-cell-middle nav-menu">
+               <div class="w3-quarter w3-mobile" style="margin-top: 0.3rem;">
+                  <a href="index.html" class="w3-text-white w3-large">Accueil</a>
+               </div>
+               <div class="w3-quarter w3-mobile" style="margin-top: 0.3rem;">
+                  <a href="recipe.html" class="w3-text-white w3-large">Offres</a>
+               </div>
+            
+               <div class="w3-quarter w3-mobile" style="margin-top: 0.3rem;">
+                  <a href="news.html" class="w3-text-green w3-large">Galerie</a>
+               </div>
+            </div>
+         </div>
+         <div class="w3-container w3-center w3-white w3-padding w3-small" style="margin-top: 4rem;"
+            >&copy; Copyright 2023 InconitoDev. All Rights Reserved.</div>
+      </div>
+
+      <script>
+         function myFunction() {
+           var x = document.getElementById("demo");
+           if (x.className.indexOf("w3-show") == -1) {
+             x.className += " w3-show";
+             x.className = x.className.replace(" w3-hide", "");
+           } else { 
+             x.className = x.className.replace(" w3-show", " w3-hide");
+           }
+         }
+
+         const API = "https://ashnadagotour.onrender.com";  // ← mets ton backend Render ici
+
+async function loadGallery() {
+    const res = await fetch(`${API}/items`);
+    const items = await res.json();
+
+    const gallery = document.getElementById("gallery");
+    gallery.innerHTML = "";
+
+    items.forEach(item => {
+        const date = new Date(item.created_at).toLocaleString();
+
+        const div = document.createElement("div");
+        div.className = "gallery-item";
+        div.innerHTML = `
+            <img src="${item.image_url}" alt="">
+            <div class="gallery-info">
+                <div class="gallery-description">${item.description}</div>
+                <div class="gallery-date">Publié le ${date}</div>
+            </div>
+        `;
+
+        // Click pour ouvrir modal
+        div.onclick = () => openModal(item.image_url);
+
+        gallery.appendChild(div);
+    });
+}
+
+loadGallery();
+
+
+// ------------------------
+// MODAL AFFICHAGE IMAGE
+// ------------------------
+const modal = document.getElementById("myModal");
+const modalImg = document.getElementById("img01");
+
+function openModal(src) {
+    modal.style.display = "block";
+    modalImg.src = src;
+}
+
+document.querySelector(".close").onclick = function() {
+    modal.style.display = "none";
+};
+
+       </script>
+        <script src="scripts.js"></script>  
+   </body>
+</html>
